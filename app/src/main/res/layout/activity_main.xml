@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.singh.grv.meteorwallet.MainActivity">
+
+    <include layout="@layout/toolbar_main" android:id="@+id/toolbar_main"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:id="@+id/relative_layout_container"
+        android:layout_below="@+id/toolbar_main"
+        android:background="@color/colorPrimary">
+
+
+        <TextView
+            android:id="@+id/currency_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/balance"
+            android:layout_marginRight="3dp"
+            android:layout_toStartOf="@+id/balance"
+            android:fontFamily="@font/varela_round"
+            android:text="₹"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/roboto_light"
+            android:text="9.382"
+            android:textColor="#ffffff"
+            android:textSize="55sp" />
+
+        <TextView
+            android:id="@+id/country_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/balance"
+            android:fontFamily="@font/varela_round"
+            android:text="INR"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/balance"
+            android:fontFamily="@font/varela_round"
+            android:background="@drawable/withdraw_btn_bg"
+            android:textColor="#ffffff"
+            android:layout_centerHorizontal="true"
+            android:text="Withdraw" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/currency_symbol"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="17dp"
+            android:fontFamily="@font/varela_round"
+            android:text="Welcome, Gaurav"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/timeline_small"
+        android:layout_below="@+id/relative_layout_container">
+
+
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="40dp"
+    android:id="@+id/toolbar_main"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/varela_round"
+        android:text="meteor"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/varela_round"
+        android:text="Money"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="23sp" />
+
+</android.support.v7.widget.Toolbar>

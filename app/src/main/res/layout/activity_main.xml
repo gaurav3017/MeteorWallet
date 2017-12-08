@@ -1,105 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.singh.grv.meteorwallet.MainActivity">
+    tools:context="com.singh.grv.meteorwallet.MainActivity"
+    android:id="@+id/drawer_layout">
 
-    <include layout="@layout/toolbar_main" android:id="@+id/toolbar_main"/>
 
-    <RelativeLayout
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:id="@+id/relative_layout_container"
-        android:layout_below="@+id/toolbar_main"
-        android:background="@color/colorPrimary">
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <include layout="@layout/toolbar_main" android:id="@+id/toolbar_main"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:id="@+id/relative_layout_container"
+            android:layout_below="@+id/toolbar_main"
+            android:background="@color/colorPrimary">
 
 
-        <TextView
-            android:id="@+id/currency_symbol"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/currency_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/balance"
+                android:layout_marginRight="3dp"
+                android:layout_toStartOf="@+id/balance"
+                android:fontFamily="@font/varela_round"
+                android:text="₹"
+                android:textColor="#ffffff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/roboto_light"
+                android:text="9.382"
+                android:textColor="#ffffff"
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/country_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toEndOf="@+id/balance"
+                android:fontFamily="@font/varela_round"
+                android:text="INR"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/balance"
+                android:fontFamily="@font/varela_round"
+                android:background="@drawable/withdraw_btn_bg"
+                android:textColor="#ffffff"
+                android:layout_centerHorizontal="true"
+                android:text="Withdraw" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/currency_symbol"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="17dp"
+                android:fontFamily="@font/varela_round"
+                android:text="Welcome, Gaurav"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/balance"
-            android:layout_marginRight="3dp"
-            android:layout_toStartOf="@+id/balance"
-            android:fontFamily="@font/varela_round"
-            android:text="₹"
-            android:textColor="#ffffff"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:id="@+id/tabs_main"
+            android:background="@color/colorPrimary"
+            android:layout_below="@+id/relative_layout_container"
+            app:tabIndicatorColor="@android:color/white"
+            app:tabIndicatorHeight="2dp"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="@android:color/white" >
 
-        <TextView
-            android:id="@+id/balance"
-            android:layout_width="wrap_content"
+        </android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:fontFamily="@font/roboto_light"
-            android:text="9.382"
-            android:textColor="#ffffff"
-            android:textSize="50sp" />
-
-        <TextView
-            android:id="@+id/country_currency"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="8dp"
-            android:layout_toEndOf="@+id/balance"
-            android:fontFamily="@font/varela_round"
-            android:text="INR"
-            android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:paddingStart="30dp"
-            android:paddingEnd="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_below="@+id/balance"
-            android:fontFamily="@font/varela_round"
-            android:background="@drawable/withdraw_btn_bg"
-            android:textColor="#ffffff"
-            android:layout_centerHorizontal="true"
-            android:text="Withdraw" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/currency_symbol"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="17dp"
-            android:fontFamily="@font/varela_round"
-            android:text="Welcome, Gaurav"
-            android:textColor="#ffffff"
-            android:textSize="20sp" />
+            android:layout_below="@+id/tabs_main"
+            android:id="@+id/tabPager"></android.support.v4.view.ViewPager>
 
     </RelativeLayout>
 
-    <android.support.design.widget.TabLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tabs_main"
-        android:background="@color/colorPrimary"
-        android:layout_below="@+id/relative_layout_container"
-        app:tabIndicatorColor="@android:color/white"
-        app:tabIndicatorHeight="2dp"
-        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
-        app:tabSelectedTextColor="@android:color/white"
-        app:tabTextColor="@android:color/white" >
 
-    </android.support.design.widget.TabLayout>
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navigation_view"
+        app:headerLayout="@layout/navigation_drawer_header"
+        app:menu="@menu/drawer_menu"
+        android:layout_gravity="start"
+        android:background="#ffffff"></android.support.design.widget.NavigationView>
 
-    <android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tabs_main"
-        android:id="@+id/tabPager"></android.support.v4.view.ViewPager>
-
-
-</RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

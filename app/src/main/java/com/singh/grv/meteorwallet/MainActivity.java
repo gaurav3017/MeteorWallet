@@ -1,5 +1,7 @@
 package com.singh.grv.meteorwallet;
 
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +16,10 @@ public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
 
+    private ViewPager mViewPager;
+    private SectionsPagerAdapter mSectionsPagerAdapter;
+    private TabLayout mTabLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +29,15 @@ public class MainActivity extends AppCompatActivity {
         this.setSupportActionBar(toolbar);
         this.getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        RecyclerView recyclerViewTimelineSmall = (RecyclerView)findViewById(R.id.timeline_small);
-        recyclerViewTimelineSmall.setLayoutManager(new LinearLayoutManager(this));
-        recyclerViewTimelineSmall.setAdapter(new TimelineSmallAdapter());
+        mViewPager = (ViewPager) findViewById(R.id.tabPager);
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mViewPager.setAdapter(mSectionsPagerAdapter);
+        mTabLayout = (TabLayout) findViewById(R.id.tabs_main);
+        mTabLayout.setupWithViewPager(mViewPager);
+
+
+
+
     }
 
     @Override

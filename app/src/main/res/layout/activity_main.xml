@@ -10,7 +10,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="180dp"
         android:id="@+id/relative_layout_container"
         android:layout_below="@+id/toolbar_main"
         android:background="@color/colorPrimary">
@@ -38,7 +38,7 @@
             android:fontFamily="@font/roboto_light"
             android:text="9.382"
             android:textColor="#ffffff"
-            android:textSize="55sp" />
+            android:textSize="50sp" />
 
         <TextView
             android:id="@+id/country_currency"
@@ -81,16 +81,25 @@
 
     </RelativeLayout>
 
-
-
-    <android.support.v7.widget.RecyclerView
+    <android.support.design.widget.TabLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/timeline_small"
-        android:layout_below="@+id/relative_layout_container">
+        android:layout_height="wrap_content"
+        android:id="@+id/tabs_main"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/relative_layout_container"
+        app:tabIndicatorColor="@android:color/white"
+        app:tabIndicatorHeight="2dp"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@android:color/white" >
 
+    </android.support.design.widget.TabLayout>
 
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabs_main"
+        android:id="@+id/tabPager"></android.support.v4.view.ViewPager>
 
-    </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>

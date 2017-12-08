@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(res_id==R.id.menu_settings)
         {
-            Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Notifications clicked", Toast.LENGTH_SHORT).show();
         }
         return true;
     }

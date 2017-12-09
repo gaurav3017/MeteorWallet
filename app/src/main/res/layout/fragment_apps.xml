@@ -4,10 +4,14 @@
     android:layout_height="match_parent"
     tools:context="com.singh.grv.meteorwallet.AppsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <GridView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/grid_view_apps"
+        android:numColumns="auto_fit"
+        android:gravity="center"
+
+        android:stretchMode="columnWidth"
+        ></GridView>
 
 </FrameLayout>

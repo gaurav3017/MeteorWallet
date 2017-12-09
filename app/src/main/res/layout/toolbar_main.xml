@@ -2,8 +2,7 @@
 <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/toolbar_main"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
-    android:background="@color/colorPrimary">
+    android:layout_height="40dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,5 +24,17 @@
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="23sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/varela_round"
+        android:text=" beta"
+        android:textStyle="italic"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="9sp" />
 
 </android.support.v7.widget.Toolbar>
